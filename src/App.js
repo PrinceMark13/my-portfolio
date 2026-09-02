@@ -19,7 +19,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <ThemeProvider>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/my-portfolio">
         <MainContent />
       </Router>
     </ThemeProvider>
