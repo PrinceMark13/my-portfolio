@@ -120,7 +120,7 @@ const Resume = () => {
                 <div className="resume-certificate-header">
                   <h3 className="resume-certificate-title">{section.title}</h3>
                   <a
-                    href={section.viewAllPdf}
+                    href={process.env.PUBLIC_URL + section.viewAllPdf}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="resume-view-all-btn"
@@ -133,7 +133,7 @@ const Resume = () => {
                     <li key={i} className="resume-certificate-item">
                       <span className="resume-certificate-text">{item.text}</span>
                       <a
-                        href={item.page ? `${item.pdf}#page=${item.page}` : item.pdf}
+                        href={item.page ? `${process.env.PUBLIC_URL}${item.pdf}#page=${item.page}` : process.env.PUBLIC_URL + item.pdf}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="resume-certificate-link"
@@ -174,7 +174,7 @@ const Resume = () => {
               Click the button below to download my resume in PDF format.
             </p>
             <a
-              href="/resume.pdf"
+              href={process.env.PUBLIC_URL + "/resume.pdf"}
               download="Resume.pdf"
               className="resume-download-button"
             >
