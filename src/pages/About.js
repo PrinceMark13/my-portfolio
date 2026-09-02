@@ -17,7 +17,7 @@ function About() {
                     </div>
                     <div id='me-section'>
                         <div id='profile'>
-                            <img id='image' src='me16.jfif' alt="Profile" />
+                            <img id='image' src='/me16.jfif' alt="Profile" />
                         </div>
                         <div id='aboutme-content'>
                             <h2 id='content-title'>IT Student | Aspiring Web Developer</h2>
