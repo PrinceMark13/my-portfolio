@@ -174,7 +174,7 @@ const Resume = () => {
               Click the button below to download my resume in PDF format.
             </p>
             <a
-              href={process.env.PUBLIC_URL + "/resume.pdf"}
+              href={process.env.PUBLIC_URL + "/Resume.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="resume-download-button"
