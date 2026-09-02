@@ -175,7 +175,8 @@ const Resume = () => {
             </p>
             <a
               href={process.env.PUBLIC_URL + "/resume.pdf"}
-              download="Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="resume-download-button"
             >
               <FaDownload /> Download PDF
