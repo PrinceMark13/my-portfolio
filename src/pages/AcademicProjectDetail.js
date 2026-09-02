@@ -93,7 +93,7 @@ function AcademicProjectDetail() {
       <div className="project-hero">
         <div
           className="project-hero-image"
-          style={{ backgroundImage: `url(${project.imgSrc})` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${project.imgSrc})` }}
         >
           <div className="project-hero-overlay">
             <h2>{project.title}</h2>
@@ -192,7 +192,7 @@ function AcademicProjectDetail() {
                 key={num}
                 type="button"
                 className="cloning-source-item"
-                style={{ backgroundImage: `url(/Cloning/${num}.jpg)` }}
+                style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Cloning/${num}.jpg)` }}
                 onClick={() => {
                   const idx = mediaItems.findIndex((m) => m.src === `/Cloning/${num}.jpg`);
                   if (idx !== -1) setLightboxIndex(idx);
@@ -208,7 +208,7 @@ function AcademicProjectDetail() {
             <button
               type="button"
               className="cloning-final-item"
-              style={{ backgroundImage: `url(/Cloning/finalpic.png)` }}
+              style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/Cloning/finalpic.png)` }}
               onClick={() => {
                 const idx = mediaItems.findIndex((m) => m.src === '/Cloning/finalpic.png');
                 if (idx !== -1) setLightboxIndex(idx);
@@ -233,7 +233,7 @@ function AcademicProjectDetail() {
                   key={index}
                   type="button"
                   className="project-gallery-item"
-                  style={{ backgroundImage: `url(${item.src})`, border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${item.src})`, border: 'none', cursor: 'pointer', padding: 0 }}
                   onClick={() => setLightboxIndex(mediaItems.indexOf(item))}
                   aria-label={`View screenshot ${index + 1} of ${project.title}`}
                 />
@@ -249,7 +249,7 @@ function AcademicProjectDetail() {
                   onClick={() => setLightboxIndex(mediaItems.indexOf(item))}
                   aria-label={`Play preview video for ${project.title}`}
                 >
-                  <VideoThumbnail src={item.src} />
+                  <VideoThumbnail src={process.env.PUBLIC_URL + item.src} />
                 </button>
               );
             }
@@ -317,7 +317,7 @@ function AcademicProjectDetail() {
                   <button
                     type="button"
                     className="project-card-image"
-                    style={{ backgroundImage: `url(${p.imgSrc})`, cursor: 'pointer', border: 'none', padding: 0, width: '100%' }}
+                    style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${p.imgSrc})`, cursor: 'pointer', border: 'none', padding: 0, width: '100%' }}
                     onClick={() => navigate(`/portfolio/academic-projects/${p.slug}`)}
                     aria-label={`View ${p.title} project details`}
                   >
@@ -378,7 +378,7 @@ function AcademicProjectDetail() {
 
           {mediaItems[lightboxIndex].type === 'video' ? (
             <video
-              src={mediaItems[lightboxIndex].src}
+              src={process.env.PUBLIC_URL + mediaItems[lightboxIndex].src}
               controls
               autoPlay
               className="lightbox-video"
@@ -386,7 +386,7 @@ function AcademicProjectDetail() {
             />
           ) : (
             <img
-              src={mediaItems[lightboxIndex].src}
+              src={process.env.PUBLIC_URL + mediaItems[lightboxIndex].src}
               alt="Project screenshot enlarged"
               className="lightbox-image"
               onClick={(e) => e.stopPropagation()}

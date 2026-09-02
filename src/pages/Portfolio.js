@@ -640,7 +640,7 @@ function Portfolio() {
       <h1 className='portfolio-title'>MY WORKS</h1>
       <div className="category-boxes">
         {categories.map((category, index) => (
-          <Link to={category.path} className={`category-box${category.bgImage ? ' has-bg' : ''}`} key={index} style={category.bgImage ? { backgroundImage: `url(${category.bgImage})` } : undefined}>
+          <Link to={category.path} className={`category-box${category.bgImage ? ' has-bg' : ''}`} key={index} style={category.bgImage ? { backgroundImage: `url(${process.env.PUBLIC_URL}${category.bgImage})` } : undefined}>
             {category.bgImage && <div className='category-box-overlay'></div>}
             <div className='category-box-content'>
               {category.icon}

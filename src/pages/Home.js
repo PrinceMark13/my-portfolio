@@ -20,9 +20,9 @@ function Home() {
                         </div>
                     </div>
                     <div id='profile-image'>
-                        <img className='img img-first' src='/me15.jfif' alt="Profile Image 1" />
-                        <img className='img img-center' src='/me1.jfif' alt="Profile Image 2" />
-                        <img className='img img-last' src='/me14.jfif' alt="Profile Image 3" />
+                        <img className='img img-first' src={process.env.PUBLIC_URL + '/me15.jfif'} alt="Profile 1" />
+                        <img className='img img-center' src={process.env.PUBLIC_URL + '/me1.jfif'} alt="Profile 2" />
+                        <img className='img img-last' src={process.env.PUBLIC_URL + '/me14.jfif'} alt="Profile 3" />
                     </div>
                 </div>
                 <Footer minimal />

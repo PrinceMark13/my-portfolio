@@ -53,7 +53,7 @@ function CategoryPage({ pageId, title, projects, getProjectPath }) {
                     <Link
                       to={detailPath}
                       className="project-card-image"
-                      style={{ backgroundImage: `url(${project.imgSrc})` }}
+                      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${project.imgSrc})` }}
                     >
                       <span className="project-card-badge">{project.category}</span>
                       <div className="overlay">
@@ -68,7 +68,7 @@ function CategoryPage({ pageId, title, projects, getProjectPath }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-card-image"
-                      style={{ backgroundImage: `url(${project.imgSrc})` }}
+                      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${project.imgSrc})` }}
                     >
                       <span className="project-card-badge">{project.category}</span>
                       <div className="overlay">

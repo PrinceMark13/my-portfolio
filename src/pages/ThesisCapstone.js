@@ -30,7 +30,7 @@ function ThesisCapstone() {
       <div className="project-hero">
         <div
           className="project-hero-image"
-          style={{ backgroundImage: `url(${project.imgSrc})` }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${project.imgSrc})` }}
         >
           <div className="project-hero-overlay">
             <h2>{project.title}</h2>
@@ -103,7 +103,7 @@ function ThesisCapstone() {
               controls
               preload="metadata"
             >
-              <source src={project.video} type="video/mp4" />
+              <source src={process.env.PUBLIC_URL + project.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

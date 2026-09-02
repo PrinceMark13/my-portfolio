@@ -70,7 +70,7 @@ function OjtInternship() {
           </div>
           {data.companyLogo && (
             <div className="ojt-hero-logo">
-              <img src={data.companyLogo} alt={`${data.company} logo`} />
+              <img src={process.env.PUBLIC_URL + data.companyLogo} alt={`${data.company} logo`} />
             </div>
           )}
         </div>
@@ -93,7 +93,7 @@ function OjtInternship() {
               {project.image && (
                 <div
                   className="ojt-project-image"
-                  style={{ backgroundImage: `url(${project.image})` }}
+                  style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${project.image})` }}
                 />
               )}
               <div className="ojt-project-body">
@@ -149,7 +149,7 @@ function OjtInternship() {
                 key={index}
                 type="button"
                 className="ojt-photo-item"
-                style={{ backgroundImage: `url(${photo.src})` }}
+                style={{ backgroundImage: `url(${process.env.PUBLIC_URL}${photo.src})` }}
                 onClick={() => setLightboxIndex(index)}
                 aria-label={`View ${photo.caption}`}
               >
@@ -172,7 +172,7 @@ function OjtInternship() {
             </div>
             <img
               className="ojt-certificate-image"
-              src={data.certificate.src}
+              src={process.env.PUBLIC_URL + data.certificate.src}
               alt={data.certificate.title}
             />
           </div>
@@ -217,7 +217,7 @@ function OjtInternship() {
 
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <img
-              src={data.photos[lightboxIndex].src}
+              src={process.env.PUBLIC_URL + data.photos[lightboxIndex].src}
               alt={data.photos[lightboxIndex].caption}
               className="lightbox-image"
             />

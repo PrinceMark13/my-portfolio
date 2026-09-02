@@ -19,7 +19,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <ThemeProvider>
-      <Router>
+      <Router basename="/my-portfolio">
         <MainContent />
       </Router>
     </ThemeProvider>
