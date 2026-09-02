@@ -1,0 +1,130 @@
+/* Footer Container */
+.footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 10px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+}
+
+.footer-section:first-child h3 {
+  text-align: left;
+}
+
+.footer-section:last-child h3 {
+  text-align: right;
+}
+
+/* Quick Links Horizontal */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.footer-links li {
+  display: inline-block;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: var(--text-secondary);
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  font-size: 14px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  transition: border-color 0.3s ease;
+}
+
+#b-footer {
+  color: var(--text-secondary);
+}
+
+#b-footer a {
+  color: var(--accent-color);
+}
+
+#b-footer a:hover {
+  color: var(--accent-hover);
+}
+
+/* Theme toggle in minimal footer (Home page) */
+.footer-bottom-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.footer-bottom-toggle .theme-toggle {
+  width: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .footer-section:first-child h3,
+  .footer-section:last-child h3 {
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

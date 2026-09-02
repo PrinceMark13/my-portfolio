@@ -1,0 +1,25 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--toggle-border);
+  background: var(--toggle-bg);
+  color: var(--toggle-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--toggle-hover-bg);
+  color: var(--toggle-hover-color);
+  transform: scale(1.1);
+}
+
+/* Dark mode icon color adjustment */
+[data-theme="dark"] .theme-toggle {
+  color: #f1f5f9;
+}

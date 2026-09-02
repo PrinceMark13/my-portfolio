@@ -1,0 +1,154 @@
+/* ===================== THEME VARIABLES ===================== */
+:root,
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #717171;
+  --border-color: #e2e8f0;
+  --accent-color: #4CAF50;
+  --accent-hover: #43a047;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --input-bg: #f7f8fa;
+  --input-border: #d1d5db;
+  --code-bg: #f3f4f6;
+  --toggle-bg: #e5e7eb;
+  --toggle-border: #d1d5db;
+  --toggle-color: #4a4a4a;
+  --toggle-hover-bg: #d1d5db;
+  --toggle-hover-color: #1a1a1a;
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
+  --header-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-color: #334155;
+  --accent-color: #4CAF50;
+  --accent-hover: #66BB6A;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --input-bg: #1e293b;
+  --input-border: #475569;
+  --code-bg: #1e293b;
+  --toggle-bg: #334155;
+  --toggle-border: #475569;
+  --toggle-color: #f1f5f9;
+  --toggle-hover-bg: #475569;
+  --toggle-hover-color: #ffffff;
+  --link-color: #60a5fa;
+  --link-hover: #93bbfc;
+  --header-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: var(--link-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* ===================== LAYOUT ===================== */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.app-main #home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#home .footer {
+  margin-top: auto;
+}
+
+.app-main #academic-projects-page,
+.app-main #academic-project-detail-page,
+.app-main #thesis-capstone-page,
+.app-main #ojt-internship-page,
+.app-main #personal-projects-page,
+.app-main #contact,
+.app-main #resume-page,
+.app-main #about-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#academic-projects-page .footer,
+#academic-project-detail-page .footer,
+#thesis-capstone-page .footer,
+#ojt-internship-page .footer,
+#personal-projects-page .footer,
+#contact .footer,
+#resume-page .footer,
+#about-page .footer {
+  margin-top: auto;
+}
+
+/* ===================== SOCIAL MEDIA ICON HOVER COLORS ===================== */
+a:hover .bi-facebook,
+a .bi-facebook:hover {
+  color: #1877F2 !important;
+}
+
+a:hover .bi-instagram,
+a .bi-instagram:hover {
+  color: #E4405F !important;
+}
+
+a:hover .bi-github,
+a .bi-github:hover {
+  color: #181717 !important;
+}
+
+[data-theme="dark"] a:hover .bi-github,
+[data-theme="dark"] a .bi-github:hover {
+  color: #f1f5f9 !important;
+}
+
+a:hover .bi-linkedin,
+a .bi-linkedin:hover {
+  color: #0A66C2 !important;
+}

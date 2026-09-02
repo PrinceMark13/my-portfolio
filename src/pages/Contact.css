@@ -1,0 +1,248 @@
+#contact-page {
+  margin-top: 40px;
+}
+
+/* Info Items Grid */
+.info-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.info-item .icon {
+  color: #fff;
+  background-color: var(--accent-color);
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.info-item h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Social Links */
+.info-item .social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.info-item .social-links a {
+  font-size: 18px;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.info-item .social-links a.bi-github:hover {
+  color: #181717;
+}
+
+.info-item .social-links a.bi-facebook:hover {
+  color: #1877F2;
+}
+
+.info-item .social-links a.bi-instagram:hover {
+  color: #E4405F;
+}
+
+.info-item .social-links a.bi-linkedin:hover {
+  color: #0A66C2;
+}
+
+/* Dark mode GitHub icon needs light color */
+[data-theme="dark"] .info-item .social-links a.bi-github:hover {
+  color: #f1f5f9;
+}
+
+/* Form Styles */
+.contact .php-email-form {
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact .php-email-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.contact .php-email-form .form-row .form-group {
+  flex: 1;
+}
+
+.contact .php-email-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .php-email-form .form-control {
+  width: 100%;
+  height: 46px;
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact .php-email-form .form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+  outline: none;
+}
+
+.contact .php-email-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact .php-email-form .form-actions {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact .php-email-form .form-actions button {
+  padding: 12px 36px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact .php-email-form .form-actions button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.contact .php-email-form .form-actions button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-status {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-status.success {
+  color: var(--accent-color);
+}
+
+.form-status.error {
+  color: #e74c3c;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 992px) {
+  .info-grid-compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+  .info-grid-compact {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .info-item {
+    padding: 16px;
+  }
+
+  .info-item .icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    margin-right: 12px;
+  }
+
+  .info-item h3 {
+    font-size: 15px;
+  }
+
+  .info-item p {
+    font-size: 13px;
+  }
+
+  .contact .php-email-form {
+    padding: 20px;
+  }
+
+  .contact .php-email-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact .php-email-form .form-control {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .contact .php-email-form .form-actions button {
+    padding: 10px 28px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 400px) {
+  .info-grid-compact {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contact .php-email-form {
+    padding: 16px;
+  }
+
+  .contact .php-email-form .form-group {
+    margin-bottom: 14px;
+  }
+}

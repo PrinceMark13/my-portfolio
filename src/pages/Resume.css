@@ -1,0 +1,371 @@
+/* ===================== RESUME PAGE ===================== */
+
+#resume-page {
+  padding: 40px 0 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#resume-page .footer {
+  margin-top: auto;
+}
+
+/* Content container */
+.resume-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section wrapper */
+.resume-section {
+  margin-bottom: 48px;
+}
+
+.resume-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  position: relative;
+}
+
+.resume-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+}
+
+/* ===================== EDUCATION TIMELINE ===================== */
+
+.resume-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.resume-timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.resume-timeline-item {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.resume-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume-timeline-dot {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-color);
+}
+
+.resume-timeline-content {
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, background-color 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.resume-timeline-content:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+.resume-period {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-color);
+  background: rgba(76, 175, 80, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.resume-school {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+}
+
+.resume-degree {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ===================== CERTIFICATES ===================== */
+
+.resume-certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.resume-certificate-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, background-color 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.resume-certificate-card:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+.resume-certificate-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.resume-certificate-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.resume-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.resume-view-all-btn:hover {
+  color: var(--accent-hover);
+}
+
+.resume-view-all-btn svg {
+  font-size: 10px;
+}
+
+.resume-certificate-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px 0 0;
+  max-height: 340px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.resume-certificate-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.resume-certificate-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.resume-certificate-list::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 3px;
+}
+
+.resume-certificate-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-muted);
+}
+
+.resume-certificate-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resume-certificate-item:last-child {
+  border-bottom: none;
+}
+
+.resume-certificate-text {
+  flex: 1;
+}
+
+.resume-certificate-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 6px;
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+  font-size: 11px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-certificate-link:hover {
+  background: var(--accent-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ===================== SKILLS ===================== */
+
+.resume-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.resume-skill-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, background-color 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.resume-skill-card:hover {
+  box-shadow: var(--card-hover-shadow);
+}
+
+.resume-skill-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.resume-skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* ===================== DOWNLOAD SECTION ===================== */
+
+.resume-download-section {
+  text-align: center;
+}
+
+.resume-download-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 48px 40px;
+  box-shadow: var(--shadow-md);
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease;
+}
+
+.resume-download-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+}
+
+.resume-download-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+.resume-download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.resume-download-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .resume-certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-download-card {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-timeline {
+    padding-left: 24px;
+  }
+
+  .resume-timeline-dot {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .resume-timeline-content {
+    padding: 16px;
+  }
+
+  .resume-period {
+    font-size: 12px;
+  }
+
+  .resume-school {
+    font-size: 15px;
+  }
+}

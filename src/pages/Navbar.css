@@ -1,0 +1,138 @@
+:root {
+  --nav-font: "Poppins", sans-serif;
+  --nav-hover-color: #4CAF50;
+}
+
+[data-theme="light"] {
+  --nav-color: #2d3748;
+}
+
+[data-theme="dark"] {
+  --nav-color: #e2e8f0;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar .nav-links {
+    margin: 0px 30px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  .navbar>.nav-links>li {
+    white-space: nowrap;
+    padding: 15px 14px;
+  }
+
+  .navbar>.nav-links>li:last-child {
+    padding-right: 0;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .navbar>.nav-links>li>a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .navbar a:hover:before,
+  .navbar li:hover>a:before,
+  .navbar .active:before {
+    visibility: visible;
+    width: 45px;
+  }
+
+  .navbar li:hover>a,
+  .navbar .active,
+  .navbar .active:focus {
+    color: var(--nav-hover-color);
+  }
+}
+
+/* Responsive nav styles below the 1200px breakpoint (tablet & mobile) */
+@media (max-width: 1199px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .navbar .nav-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar li {
+    position: relative;
+  }
+
+  .navbar>.nav-links>li {
+    white-space: nowrap;
+    padding: 10px 10px;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .navbar li:hover>a,
+  .navbar .active,
+  .navbar .active:focus {
+    color: var(--nav-hover-color);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar>.nav-links>li {
+    padding: 8px 6px;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    font-size: 13px;
+  }
+}

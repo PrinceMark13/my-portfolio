@@ -1,0 +1,231 @@
+#home {
+  position: relative;
+}
+
+#main-container {
+  text-align: left;
+  animation: zoomOut 1s ease-in-out 0.1s;
+  margin: 120px 45px 180px;
+  display: flex;
+  max-width: 1200px;
+  padding-top: 10px;
+  flex-direction: row;
+}
+
+#name {
+  font-size: 48px;
+  margin-bottom: 0;
+  color: var(--text-primary);
+}
+
+#subtitle {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+#highlight {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Updated Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: var(--text-primary);
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+/* Optional animations */
+@keyframes zoomOut {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#profile-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 16px;
+}
+
+.img {
+  width: auto;
+  height: 280px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  transition: 0.5s ease-out;
+  filter: grayscale(40%);
+}
+
+.img:hover {
+  filter: grayscale(0);
+  transform: scale(1.03);
+  z-index: 999;
+}
+
+.img-first {
+  margin-left: 10px;
+}
+
+.img-center {
+  margin-left: -66px;
+}
+
+.img-last {
+  margin-left: -65px;
+}
+
+/* Image Shadow */
+#profile-image::after {
+  content: "";
+  position: absolute;
+  bottom: 120px;
+  background: rgba(80, 80, 80, 0.5);
+  width: 25rem;
+  height: 50px;
+  border-radius: 50%;
+  filter: blur(20px);
+  margin-left: 6rem;
+}
+
+/* Desktop / laptop / PC: guarantee #quote enough width so the full name
+   ("Mark Anthony Gubat") always fits on one line, instead of leaving its
+   width to whatever #profile-image's flex:1 happens to leave over (which
+   varied by viewport and sometimes wasn't quite enough). */
+@media (min-width: 992px) {
+  #quote {
+    flex: 1 1 auto;
+    min-width: 500px;
+  }
+
+  #profile-image {
+    flex: 1 1 380px;
+  }
+}
+
+/* Tablet and mobile (0-991px): stack the text/nav and the profile images
+   instead of side by side. This range previously only covered up to
+   768px, leaving 769-991px still attempting the cramped side-by-side
+   layout, which caused the name to wrap and the photos to be squeezed. */
+@media (max-width: 991px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #main-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 90px 20px 100px;
+    flex: 1;
+  }
+
+  #name {
+    font-size: 44px;
+  }
+
+  #subtitle {
+    font-size: 22px;
+  }
+
+  .social-links a {
+    font-size: 34px;
+  }
+
+  #quote {
+    order: 2;
+  }
+
+  #profile-image {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 6px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #quote .navbar {
+    margin-top: 10px;
+  }
+
+  #quote .social-links {
+    margin-top: 16px;
+  }
+
+  #profile-image::after {
+    width: 90%;
+    max-width: 320px;
+    margin-left: 0;
+  }
+
+  .img {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .img-first {
+    margin-left: 0;
+  }
+
+  .img-center {
+    margin-left: -46px;
+  }
+
+  .img-last {
+    margin-left: -46px;
+  }
+}
+
+@media (max-width: 480px) {
+  #name {
+    font-size: 34px;
+  }
+
+  #subtitle {
+    font-size: 19px;
+  }
+
+  .social-links a {
+    font-size: 30px;
+  }
+
+  .img {
+    height: 170px;
+  }
+
+  .img-center {
+    margin-left: -38px;
+  }
+
+  .img-last {
+    margin-left: -38px;
+  }
+}
+
+/* ===================== DARK MODE OVERRIDES ===================== */
+[data-theme="dark"] .social-links a {
+  color: var(--text-primary);
+}
