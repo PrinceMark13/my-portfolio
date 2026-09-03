@@ -152,6 +152,7 @@ const Resume = () => {
         {/* Skills Section */}
         <div className="resume-section">
           <h2 className="resume-section-title">Skills</h2>
+          <p className="resume-skills-subtitle">Familiar with the following tools and technologies:</p>
           <div className="resume-skills-grid">
             {Object.values(skills).map((skill, index) => (
               <div key={index} className="resume-skill-card">

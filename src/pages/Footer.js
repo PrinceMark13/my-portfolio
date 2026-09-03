@@ -22,7 +22,7 @@ const Footer = ({ minimal = false, style }) => {
 
           {/* Social Icons */}
           <div className="footer-section">
-            <h3>Follow Us</h3>
+            <h3>Follow Me</h3>
             <div className="social-icons">
               <a href="https://github.com/PrinceMark13" aria-label="GitHub"><i className="bi bi-github"></i></a>
               <a href="https://www.facebook.com/PrinceMarkGubat.12.13.2003" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
