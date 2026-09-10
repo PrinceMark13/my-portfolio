@@ -68,7 +68,8 @@ const certificates = [
       { text: 'Introduction to Cybersecurity', pdf: '/certificates/course-completions-all.pdf', page: 2 },
       { text: 'MATLAB Onramp', pdf: '/certificates/course-completions-all.pdf', page: 3 },
       { text: 'Python Essentials 2', pdf: '/certificates/course-completions-all.pdf', page: 4 },
-      { text: 'Python Essentials 1', pdf: '/certificates/course-completions-all.pdf', page: 5 }
+      { text: 'Python Essentials 1', pdf: '/certificates/course-completions-all.pdf', page: 5 },
+      { text: 'Computer Hardware Basics', pdf: '/certificates/course-completions-all.pdf', page: 6 }
     ]
   }
 ];
